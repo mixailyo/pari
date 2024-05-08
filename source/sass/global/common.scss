@@ -1,0 +1,50 @@
+.title {
+  &-h1 {
+    font-size: 140px;
+    @include adaptiveFull('font-size', 150, 140, 80);
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: lowercase;
+    margin: 0;
+    @include adaptiveFull('margin-bottom', 40, 24, 20);
+    @include ff-primary;
+  }
+  &-h2 {
+    font-size: 140px;
+    @include adaptiveFull('font-size', 140, 140, 80);
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: lowercase;
+    margin: 0;
+    @include adaptiveFull('margin-bottom', 40, 24, 20);
+    @include ff-primary;
+  }
+  &-h3 {
+    @include adaptiveFull('font-size', 40, 30, 20);
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  &-h33 {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: lowercase;
+    margin: 0;
+    @include ff-primary;
+  }
+  &-h4 {
+    @include adaptiveFull('font-size', 22, 22, 18);
+    font-weight: 600;
+    line-height: 130%;
+    margin: 0;
+  }
+}
+
+.text {
+  &-norm {
+    @include adaptiveFull('font-size', 20, 20, 16);
+    line-height: 140%;
+  }
+}

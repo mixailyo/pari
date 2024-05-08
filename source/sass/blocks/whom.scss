@@ -1,0 +1,75 @@
+.whom {
+  @include section-bottom-padding;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    @include adaptiveFull('gap', 30, 20, 10);
+
+    @include vp-1279 {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+.whom__title {
+}
+.whom__card {
+  position: relative;
+  border-radius: 20px;
+  border: 2px solid var(--black, #1D1D1B);
+  overflow: hidden;
+  @include adaptiveFull('min-height', 280, 280, 130);
+
+  &--big {
+    grid-column: span 2;
+  }
+
+  @include vp-1279 {
+    order: 2;
+
+    &--big {
+      grid-column: auto;
+
+      .whom__card-img {
+        object-position: left;
+      }
+    }
+  }
+
+  @include vp-767 {
+    &--big {
+      .whom__card-img {
+        object-position: 20%;
+      }
+    }
+  }
+}
+.whom__card-title {
+  position: absolute;
+  @include adaptiveFull('bottom', 30, 25, 20);
+  @include adaptiveFull('left', 30, 25, 20);
+  @include adaptiveFull('max-width', 300, 300, 150);
+
+  @include vp-1279 {
+    order: 0;
+  }
+}
+.whom__card-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: right;
+
+  @include vp-767 {
+    object-position: center;
+  }
+}
+.whom__description {
+  align-self: center;
+  margin-bottom: 30px;
+
+  @include vp-1279 {
+    order: 1;
+  }
+}

@@ -16,8 +16,8 @@ html {
   font-weight: 400;
   font-size: $fz-default;
   line-height: 24px;
-  font-family: $ff-placeholder;
-  color: $color-default-black;
+  font-family: $ff-default;
+  color: var(--black);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,7 +35,7 @@ body {
 }
 
 a {
-  color: $color-default-black;
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -59,7 +59,7 @@ textarea {
 input:-webkit-autofill {
   box-shadow: inset 0 0 0 1000px $color-default-white;
 
-  -webkit-text-fill-color: $color-default-black;
+  -webkit-text-fill-color: var(--black);
 }
 
 // firefox placeholder \ invalid fix + ios bdrs
@@ -126,4 +126,15 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+}
+
+button {
+  padding: 0;
+  background: unset;
+  border: unset;
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
 }

@@ -1,0 +1,33 @@
+.line {
+  @include adaptiveDesktopToMobile('padding-top', 30, 15);
+  @include adaptiveDesktopToMobile('padding-bottom', 30, 15);
+  overflow: hidden;
+  background: var(--dark-purple, #6F4CCE);
+  color: var(--white);
+}
+
+.line__wrapper {
+  display: flex;
+  transform: translateX(-100vw);
+  width: fit-content;
+  transition: 8s linear;
+}
+.line__content {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  @include adaptiveDesktopToMobile('font-size', 120, 45);
+  @include adaptiveDesktopToMobile('letter-spacing', 7.2, 2.7);
+  font-weight: 250;
+  @include ff-primary;
+  margin: auto 0;
+}
+.line__icon {
+  @include adaptiveDesktopToMobile('width', 102, 40);
+}
+.line__content-text {
+  line-height: 100%;
+  @include adaptiveDesktopToMobile('margin-left', 50, 20);
+  @include adaptiveDesktopToMobile('margin-right', 50, 20);
+}

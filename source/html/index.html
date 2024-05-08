@@ -3,7 +3,7 @@
 <head>
 
   @@include("source/html/base/head.html")
-  <title>ProjectName — Главная</title>
+  <title>Благотворительный фонд Пари</title>
 
 </head>
 <body>
@@ -13,29 +13,39 @@
   </div>
 
   <div class="wrapper">
-    <-- для внутренних страниц используйте "headerActiveLinkIndex": 0\1\2 --> 
-    @@include("source/html/base/header.html", {
-      "index": true
-    })
+    @@include("source/html/base/header-mini.html")
 
     <main>
-      <div class="container">
-        <p><a href="#" data-open-modal="feedback">modal--feedback link</a></p>
-        <p><a href="#" data-open-modal="success">modal--success link</a></p>
-      </div>
+      @@include("source/html/components/welcome.html")
+
+      @@include("source/html/components/about.html")
+
+      @@include("source/html/components/line.html")
+
+      @@include("source/html/components/mission.html")
+
+      @@include("source/html/components/programs.html")
+
+      @@include("source/html/components/friends.html")
+
+      @@include("source/html/components/partners.html")
+
+      @@include("source/html/components/help.html")
+
+      @@include("source/html/components/main-news.html")
+      
     </main>
 
     @@include("source/html/base/footer.html")
 
     @@include("source/html/base/modal.html", {
-      "name": "feedback"
+      "name": "feedback",
+      "fitContent": true,
     })
 
     @@include("source/html/base/modal.html", {
       "name": "success",
       "fitContent": true,
-      "noScale": true,
-      "mod": "some-mod"
     })
   </div>
 

@@ -11,11 +11,44 @@
 
 @font-face {
   font-style: normal;
-  font-weight: 400;
-  font-family: "";
+  font-weight: 250;
+  font-family: "Bitcrusher";
 
   font-display: swap;
   src:
-    url("../fonts/.woff2") format("woff2"),
-    url("../fonts/.woff") format("woff");
+    url("../fonts/Bitcrusher-Extra-Light.woff2") format("woff2"),
+    url("../fonts/Bitcrusher-Extra-Light.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  font-family: "Bitcrusher";
+
+  font-display: swap;
+  src:
+    url("../fonts/Bitcrusher-Light.woff2") format("woff2"),
+    url("../fonts/Bitcrusher-Light.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Bitcrusher";
+
+  font-display: swap;
+  src:
+    url("../fonts/Bitcrusher-Regular.woff2") format("woff2"),
+    url("../fonts/Bitcrusher-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Bitcrusher";
+
+  font-display: swap;
+  src:
+    url("../fonts/Bitcrusher-Bold.woff2") format("woff2"),
+    url("../fonts/Bitcrusher-Bold.woff") format("woff");
 }

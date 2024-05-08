@@ -1,5 +1,136 @@
 .footer {
-  padding: 40px 0;
+  @include adaptiveFull('padding-top', 40, 30, 30);
+  @include adaptiveFull('padding-bottom', 40, 30, 30);
 
-  background-color: $color-neon-blue;
+  a {
+    transition: $trans-default;
+
+    @include hover-focus {
+      color: var(--purple);
+    }
+  }
+}
+.footer__main {
+  display: flex;
+  align-items: center;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+.footer__logo {
+  @include adaptiveFull('width', 354, 256, 200);
+}
+.footer__column {
+  margin-left: auto;
+  display: flex;
+
+  @include vp-767 {
+    margin: 0;
+    flex-direction: column;
+  }
+}
+.footer__menu {
+}
+.footer__menu-list {
+  @include reset-list;
+  line-height: 140%;
+  @include adaptiveFull('padding-right', 100, 10, 10);
+  border-right: 2px solid var(--black);
+
+  @include vp-767 {
+    padding: 0;
+    text-align: center;
+    border: unset;
+    margin: 20px 0 30px;
+  }
+}
+.footer__menu-item {
+  &:not(:last-child) {
+    @include adaptiveFull('margin-bottom', 25, 12, 12);
+  }
+}
+.footer__menu-link {
+}
+.footer__social {
+  @include adaptiveFull('padding-left', 30, 20, 0);
+  display: flex;
+  flex-direction: column;
+
+  @include vp-767 {
+    flex-direction: column-reverse;
+  }
+}
+.footer__social-title {
+  @include adaptiveFull('font-size', 60, 38, 38);
+  font-weight: 300;
+  @include ff-primary;
+  @include adaptiveFull('max-width', 433, 217, 217);
+  line-height: 1;
+  margin-bottom: 16px;
+
+  @include vp-767 {
+    max-width: unset;
+    padding-top: 20px;
+    border-top: 2px solid var(--black);
+    max-width: 220px;
+    text-align: center;
+  }
+}
+.footer__social-list {
+  @include reset-list;
+
+  display: flex;
+  margin-top: auto;
+
+  @include vp-767 {
+    justify-content: space-between;
+    width: 170px;
+    margin: 0 auto;
+    margin-bottom: 38px;
+  }
+}
+.footer__social-item {
+  &:nth-child(2) {
+    margin: 0 -10px;
+    z-index: 1;
+  }
+
+  @include vp-767 {
+    &:nth-child(2) {
+      margin: 0;
+    }
+  }
+}
+.footer__social-link {
+  display: block;
+  height: 51px;
+  border-radius: 50%;
+  box-shadow: -3px 3px 0px 0px #000;
+  transition: $trans-default;
+
+  @include hover-focus {
+    box-shadow: 0px 0px 0px 0px #000;
+  }
+}
+.footer__bottom {
+  @include adaptiveFull('margin-top', 75, 35, 0);
+  display: flex;
+  justify-content: space-between;
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+}
+.footer__bottom-item {
+  color: var(--Grey, #9B9B9B);
+  line-height: 140%;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
 }

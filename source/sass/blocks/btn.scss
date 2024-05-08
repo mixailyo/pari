@@ -1,26 +1,51 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
-
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
-  border: none;
-  cursor: pointer;
-
-  transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-
-    pointer-events: none;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  border-radius: 100px;
+  border: 2px solid var(--black, #1D1D1B);
+  background: var(--blue, #84DFFF);
+  box-shadow: -6px 6px 0px 0px #000;
+  height: 56px;
+  padding: 0 24px;
+  @include adaptiveFull('font-size', 18, 18, 14);
+  font-weight: 500;
+  transition: $trans-default;
 
   @include hover-focus {
-    opacity: 0.8;
+    box-shadow: 0px 0px 0px 0px #000;
   }
+  
+  &--with-arrow {
+    &::before {
+      content: url('../img/content/arrow.svg');
+      margin-right: 2px;
+      width: 30px;
+      height: 30px;
+      transition: $trans-default;
+    }
+
+    @include hover-focus {
+      &::before {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &--white {
+    background-color: var(--white);
+  } 
+
+  &--without-shadow {
+    box-shadow: unset;
+
+    @include hover-focus {
+      background-color: var(--blue);
+    }
+  }
+
+  &--green {
+    background: var(--green, #00D7AC);
+  } 
 }

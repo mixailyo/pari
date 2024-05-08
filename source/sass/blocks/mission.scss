@@ -1,0 +1,43 @@
+.mission {
+  @include section-paddings;
+  background: var(--blue, #84DFFF);
+}
+.mission__wrapper {
+  border-radius: 20px;
+  border: 2px solid var(--black, #1D1D1B);
+  background: var(--white, #FFF);
+  @include adaptiveFull('padding-top', 100, 70, 40);
+  @include adaptiveFull('padding-bottom', 100, 70, 40);
+  @include adaptiveFull('padding-left', 100, 24, 12);
+  @include adaptiveFull('padding-right', 100, 24, 12);
+  position: relative;
+}
+.mission__decor {
+  position: absolute;
+
+  &:nth-child(1) {
+    @include adaptiveFull('width', 147, 100, 65);
+    @include adaptiveFull('top', -50, -50, -30);
+    @include adaptiveFull('left', 70, 13, 0);
+  }
+  &:nth-child(2) {
+    @include adaptiveFull('width', 405, 200, 120);
+    @include adaptiveFull('bottom', -130, -130, -50);
+    @include adaptiveFull('right', -70, -13, 0);
+  }
+}
+.mission__title {
+  text-align: center;
+}
+.mission__description {
+  @include adaptiveFull('font-size', 40, 30, 16);
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-align: center;
+  @include adaptiveFull('margin-bottom', 40, 24, 20);
+}
+.mission__author {
+  color: var(--green, #00D7AC);
+  text-align: center;
+}

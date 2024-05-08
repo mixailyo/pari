@@ -1,0 +1,117 @@
+.reports {
+  @include section-paddings;
+}
+.reports__title {
+  
+}
+.reports__desktop {
+  @include vp-1279 {
+    display: none;
+  }
+}
+.reports__year {
+  &:not(:last-child) {
+    margin-bottom: 100px;
+  }
+}
+.reports__year-title {
+  margin-bottom: 30px;
+}
+.reports__year-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1125px;
+}
+.reports__year-link {
+  border-radius: 10px;
+  border: 2px solid var(--black, #1D1D1B);
+  padding: 20px;
+}
+.reports__year-link-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.reports__year-link-name {
+  color: var(--Grey, #9B9B9B);
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: lowercase;
+  @include ff-primary;
+}
+.reports__year-link-format {
+  height: 44px;
+}
+.reports__year-link-format-name {
+  margin-right: 6px;
+}
+.reports__year-link-format-icon {
+}
+.reports__year-link-description {
+}
+.reports__mobile {
+  display: none;
+
+  @include vp-1279 {
+    display: block;
+  }
+}
+.reports__cards {
+}
+.reports__card {
+  border-radius: 10px;
+  border: 2px solid var(--black, #1D1D1B);
+  background: var(--white, #FFF);
+  padding: 15px 30px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  @include vp-767 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.reports__card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.reports__card-title {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: lowercase;
+  @include ff-primary;
+}
+.reports__card-arrow {
+  transition: $trans-default;
+
+  .is-active & {
+    transform: rotate(90deg)
+  }
+}
+.reports__card-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  &::before {
+    content: '';
+    display: block;
+    height: 20px;
+    grid-column: span 2;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+
+    &::before {
+      grid-column: auto;
+    }
+  }
+}

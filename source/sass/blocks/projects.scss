@@ -1,0 +1,56 @@
+.projects {
+  @include section-paddings;
+  overflow: hidden;
+
+  .container {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    gap: 30px;
+
+    @include vp-1439 {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+.projects__title {
+}
+.projects__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  @include vp-1023 {
+    overflow-x: scroll;
+    @include adaptiveFull('padding-left', 271.5, 35, 16);
+    @include adaptiveFull('padding-right', 271.5, 35, 16);
+    @include adaptiveFull('margin-left', -271.5, -35, -16);
+    @include adaptiveFull('margin-right', -271.5, -35, -16);
+  }
+
+  @include vp-767 {
+    overflow: unset;
+    grid-template-columns: 1fr;
+  }
+}
+.projects__card {
+  border-radius: 20px;
+  border: 2px solid var(--black, #1D1D1B);
+  background: var(--green, #00D7AC);
+  overflow: hidden;
+  
+  @include vp-1023 {
+    min-width: 276px;
+  }
+}
+.projects__card-img {
+  width: 100%;
+  object-fit: cover;
+}
+.projects__card-text {
+  padding: 20px;
+}
+.projects__card-title {
+  margin-bottom: 5px;
+}
+.projects__card-description {
+}
